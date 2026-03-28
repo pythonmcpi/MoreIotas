@@ -15,7 +15,7 @@ import ram.talia.moreiotas.api.MoreIotasAPI.modLoc
 import ram.talia.moreiotas.api.casting.iota.StringIota
 import ram.talia.moreiotas.common.casting.actions.items.OpGetHeldItem
 import ram.talia.moreiotas.common.casting.actions.items.OpGetInventoryContents
-import ram.talia.moreiotas.common.casting.actions.items.OpMakeItemWithCount
+import ram.talia.moreiotas.common.casting.actions.items.OpMakeItem
 import ram.talia.moreiotas.common.casting.actions.items.OpSetItemCount
 import ram.talia.moreiotas.common.casting.actions.matrices.*
 import ram.talia.moreiotas.common.casting.actions.strings.*
@@ -160,7 +160,7 @@ object MoreIotasActions {
 	@JvmField
 	val ITEM_PROP_SIZE_SET = make("item/prop/size/set", fromAngles("adeeedew", EAST), OpSetItemCount)
 	@JvmField
-	val ITEM_FROM_TYPE_COUNT = make("item/from_type_and_count", fromAngles("daqqqaqw", EAST), OpMakeItemWithCount)
+	val ITEM_MAKE = make("item/make", fromAngles("daqqqaqw", EAST), OpMakeItem)
 
 
 	private fun make(name: String, pattern: HexPattern, action: Action): ActionRegistryEntry = make(name, ActionRegistryEntry(pattern, action))

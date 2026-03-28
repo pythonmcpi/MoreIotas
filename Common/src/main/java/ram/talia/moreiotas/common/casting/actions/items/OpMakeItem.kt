@@ -9,7 +9,7 @@ import net.minecraft.world.item.ItemStack
 import ram.talia.moreiotas.api.asActionResult
 import ram.talia.moreiotas.api.getItemType
 
-object OpMakeItemWithCount : ConstMediaAction {
+object OpMakeItem : ConstMediaAction {
     override val argc = 2
 
     override fun execute(args: List<Iota>, env: CastingEnvironment): List<Iota> {
