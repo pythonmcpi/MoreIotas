@@ -116,6 +116,13 @@ fun List<Iota>.getEntityType(idx: Int, argc: Int = 0): EntityType<*> {
     throw MishapInvalidIota.ofType(x, if (argc == 0) idx else argc - (idx + 1), "type.entity")
 }
 
+fun List<Iota>.getItemType(idx: Int, argc: Int = 0): Item? {
+    val x = this.getOrElse(idx) { throw MishapNotEnoughArgs(idx + 1, this.size) }
+    if (x is ItemTypeIota)
+        return x.item
+    throw MishapInvalidIota.ofType(x, if (argc == 0) idx else argc - (idx + 1), "type.item")
+}
+
 fun List<Iota>.getItemStack(index: Int, argc: Int = 0): ItemStack {
     val x = this.getOrElse(index) { throw MishapNotEnoughArgs(index + 1, this.size) }
 

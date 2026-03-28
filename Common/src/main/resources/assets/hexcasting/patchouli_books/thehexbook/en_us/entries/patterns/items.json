@@ -61,6 +61,14 @@
       "input": "item stack, int",
       "output": "item stack",
       "text": "moreiotas.page.items.item/prop/size/set"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "moreiotas:item/from_type_and_count",
+      "anchor": "moreiotas:item/from_type_and_count",
+      "input": "itemtype, int",
+      "output": "item stack",
+      "text": "moreiotas.page.items.item/from_type_and_count"
     }
   ]
 }
