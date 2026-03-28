@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [UNRELEASED]
+
+### Added
+
+- Added Treasurer's Purification II to convert an itemtype and a number into an item stack iota.
+
+### Changed
+
+- Made Cave Air and Void Air block types falsy to match normal Air.
+- Development: Removed `moreiotas.serialization-hooks` dependency on Fabric.
+
 ## `0.1.1` - 2025-09-23
 
 ### Changed
