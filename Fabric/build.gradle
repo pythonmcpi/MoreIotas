@@ -92,8 +92,7 @@ dependencies {
     modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-item:$cardinalComponentsVersion"
     modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-block:$cardinalComponentsVersion"
 
-    modImplementation "$modID:serialization-hooks:$serializationHooksVersion"
-    include "$modID:serialization-hooks:$serializationHooksVersion"
+    modLocalRuntime "io.github.tropheusj:serialization-hooks:$serializationHooksVersion"
     implementation(include("com.github.LlamaLad7:MixinExtras:0.1.1"))
 
     // Optional integrations

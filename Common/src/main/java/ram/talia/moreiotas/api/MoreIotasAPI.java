@@ -13,14 +13,8 @@ public interface MoreIotasAPI
 	Logger LOGGER = LogManager.getLogger(MOD_ID);
 	
 	Supplier<MoreIotasAPI> INSTANCE = Suppliers.memoize(() -> {
-		try {
-			return (MoreIotasAPI) Class.forName("com.talia.moreiotas.common.impl.MoreIotasAPIImpl")
-								 .getDeclaredConstructor().newInstance();
-		} catch (ReflectiveOperationException e) {
-			LogManager.getLogger().warn("Unable to find MoreIotasAPIImpl, using a dummy");
-			return new MoreIotasAPI() {
-			};
-		}
+		// no MoreIotasAPIImpl since this api barely does anything
+		return new MoreIotasAPI() {};
 	});
 	
 	static MoreIotasAPI instance() {

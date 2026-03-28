@@ -56,11 +56,11 @@
     },
     {
       "type": "hexcasting:pattern",
-      "op_id": "moreiotas:item/prop/size/set",
-      "anchor": "moreiotas:item/prop/size/set",
-      "input": "item stack, int",
+      "op_id": "moreiotas:item/make",
+      "anchor": "moreiotas:item/make",
+      "input": "itemtype|item stack, int",
       "output": "item stack",
-      "text": "moreiotas.page.items.item/prop/size/set"
+      "text": "moreiotas.page.items.item/make"
     }
   ]
 }

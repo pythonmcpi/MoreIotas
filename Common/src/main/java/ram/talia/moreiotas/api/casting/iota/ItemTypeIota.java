@@ -46,7 +46,6 @@ public class ItemTypeIota extends Iota {
     /**
      * If the block has no item form this returns Items.AIR
      */
-    @Nullable
     public Item getItem() {
         return this.getEither().map(item -> item, Block::asItem);
     }
@@ -73,7 +72,10 @@ public class ItemTypeIota extends Iota {
 
     @Override
     public boolean isTruthy() {
-        return this.getEither().map(item -> !item.equals(Items.AIR), block -> !block.equals(Blocks.AIR));
+        return this.getEither().map(
+                item -> !item.equals(Items.AIR),
+                block -> !block.defaultBlockState().isAir()
+        );
     }
 
     @Override

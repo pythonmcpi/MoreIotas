@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [UNRELEASED]
+
+### Changed
+
+- Published MoreIotas to https://maven.hexxy.media.
+- Converted Treasurer's Purification into an operator - the item argument can now take either a stack iota or a type iota.
+- Made Cave Air and Void Air block types falsy to match normal Air.
+- Updated zh_cn translations, by ChuijkYahus in [#55](https://github.com/FallingColors/MoreIotas/pull/55) and [#58](https://github.com/FallingColors/MoreIotas/pull/58).
+- Moved certain lang keys for type iotas from Hexal into MoreIotas, since MoreIotas is what actually implements type iotas.
+- Development: Removed `moreiotas.serialization-hooks` dependency on Fabric.
+
+### Fixed
+
+- Fixed item stack iotas using an untranslated lang key when referenced in a mishap message.
+- Fixed Patternmaster's Purification throwing an exception when used on any non-static pattern, by beholderface in [#59](https://github.com/FallingColors/MoreIotas/pull/59).
+
 ## `0.1.1` - 2025-09-23
 
 ### Changed
