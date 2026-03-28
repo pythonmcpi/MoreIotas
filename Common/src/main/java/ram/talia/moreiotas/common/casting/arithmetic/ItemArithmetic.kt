@@ -12,6 +12,7 @@ import at.petrak.hexcasting.api.casting.iota.Iota
 import at.petrak.hexcasting.api.casting.math.HexDir
 import at.petrak.hexcasting.api.casting.math.HexPattern
 import net.minecraft.world.item.ItemStack
+import ram.talia.moreiotas.common.casting.arithmetic.operator.item.OperatorMakeItem
 import ram.talia.moreiotas.common.casting.arithmetic.operator.type.OperatorExtractItem
 import ram.talia.moreiotas.common.lib.hex.MoreIotasIotaTypes.ITEM_STACK
 import java.util.function.Function
@@ -19,10 +20,13 @@ import java.util.function.Function
 object ItemArithmetic : Arithmetic {
     @JvmField
     val EXTRACT_ITEM: HexPattern = HexPattern.fromAngles("qaqqaea", HexDir.EAST)
+    @JvmField
+    val MAKE_ITEM: HexPattern = HexPattern.fromAngles("adeeedew", HexDir.EAST)
 
     private val OPS = listOf(
         ABS,
-        EXTRACT_ITEM
+        EXTRACT_ITEM,
+        MAKE_ITEM
     )
 
     override fun arithName() = "item_ops"
@@ -32,6 +36,7 @@ object ItemArithmetic : Arithmetic {
     override fun getOperator(pattern: HexPattern): Operator = when (pattern) {
         ABS -> make1Double { if (it.isEmpty) 0.0 else it.count.toDouble() }
         EXTRACT_ITEM -> OperatorExtractItem
+        MAKE_ITEM -> OperatorMakeItem
         else -> throw InvalidOperatorException("$pattern is not a valid operator in Arithmetic $this.")
     }
 

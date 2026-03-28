@@ -6,12 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [UNRELEASED]
 
-### Added
-
-- Added Treasurer's Purification II to convert an itemtype and a number into an item stack iota.
-
 ### Changed
 
+- Converted Treasurer's Purification into an operator - the item argument can now take either a stack iota or a type iota.
 - Made Cave Air and Void Air block types falsy to match normal Air.
 - Development: Removed `moreiotas.serialization-hooks` dependency on Fabric.
 
