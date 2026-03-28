@@ -73,7 +73,10 @@ public class ItemTypeIota extends Iota {
 
     @Override
     public boolean isTruthy() {
-        return this.getEither().map(item -> !item.equals(Items.AIR), block -> !block.equals(Blocks.AIR));
+        return this.getEither().map(
+                item -> !item.equals(Items.AIR),
+                block -> !(block.equals(Blocks.AIR) || block.equals(Blocks.CAVE_AIR) || block.equals(Blocks.VOID_AIR))
+        );
     }
 
     @Override
