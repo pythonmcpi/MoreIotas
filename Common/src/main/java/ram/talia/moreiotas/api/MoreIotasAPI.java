@@ -14,7 +14,7 @@ public interface MoreIotasAPI
 	
 	Supplier<MoreIotasAPI> INSTANCE = Suppliers.memoize(() -> {
 		try {
-			return (MoreIotasAPI) Class.forName("com.talia.moreiotas.common.impl.MoreIotasAPIImpl")
+			return (MoreIotasAPI) Class.forName("ram.talia.moreiotas.common.impl.MoreIotasAPIImpl")
 								 .getDeclaredConstructor().newInstance();
 		} catch (ReflectiveOperationException e) {
 			LogManager.getLogger().warn("Unable to find MoreIotasAPIImpl, using a dummy");
