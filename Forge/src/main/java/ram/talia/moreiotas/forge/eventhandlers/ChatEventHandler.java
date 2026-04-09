@@ -56,8 +56,8 @@ public class ChatEventHandler {
             event.setCanceled(true);
             lastMessages.put(uuid, text.substring(prefix.length()));
             return;
+        } else {
+            lastMessage = text;
         }
-
-        lastMessage = text;
     }
 }
